@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        const person ={
+            name: 'alan',
+            age: 21,
+        };
+
+        const {name, age} = person;
+        console.log(name);
+        console.log(age);
+
+        const sangvarly = {
+            ...person,
+            name: 'sangvarly'
+        }
+        console.log(sangvarly)
+        //2
+        const numbers = [1,2,3,4,5];
+        const newnumber = [...numbers, 6, 7, 8, true, false, "hello"];
+        console.log(newnumber);
+        const[first, second] = numbers;
+        console.log(first);
+        console.log(second);
+        //3
+        const numberslist = [12,1,6,7,15,12,14,10,9,16,17,20];
+
+        const minToMax = [...numberslist].sort((a, b) => a - b);
+        console.log("Min to Max:", minToMax); 
+
+        const maxToMin = [...numberslist].sort((a, b) => b - a);
+        console.log("Max to Min:", maxToMin);
+
+    </script>
+</body>
+</html>

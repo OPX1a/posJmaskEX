@@ -1,0 +1,29 @@
+#game {
+    background-color: black;
+    width: 450px;
+    height: 450px;
+    font-size: 45px;
+    position: relative;
+}
+
+#ghost, #player{
+    position: absolute;
+}
+
+#ghost {
+    animation-name: ghost;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes ghost{
+    0% { top: 0;}
+    100% { top: 10px}
+    0% { font-size: 45px;}
+    100% { font-size: 50px;}
+}
+
+/*make ghost run go to player (auto)
+/*console by keyborad :wasd and space for jump

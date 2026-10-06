@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDash - Quick & Tasty Delivery</title>
+    <link rel="stylesheet" href="cssBaker.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">🍔 FoodDash</a>
+            <button class="cart-icon-btn" id="cartBtn">
+                🛒 Cart <span class="cart-badge" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <!-- Search and Categories -->
+        <div class="controls">
+            <input type="text" id="searchInput" class="search-box" placeholder="Search delicious food...">
+            <div class="categories" id="categoryContainer">
+                <button class="cat-btn active" data-category="All">All</button>
+                <button class="cat-btn" data-category="Burgers">Burgers</button>
+                <button class="cat-btn" data-category="Pizza">Pizza</button>
+                <button class="cat-btn" data-category="Drinks">Drinks</button>
+            </div>
+        </div>
+
+        <!-- Food Grid -->
+        <div class="menu-grid" id="menuGrid">
+            <!-- Rendered dynamically with JavaScript -->
+        </div>
+    </div>
+
+    <!-- CART SIDEBAR -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="close-btn" id="closeCartBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Rendered dynamically with JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Total:</span>
+                <span id="totalPrice">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- ORDER TRACKING MODAL -->
+    <div class="modal" id="orderModal">
+        <h2>🎉 Order Placed!</h2>
+        <p style="margin-top: 10px; color: #666;">Thank you for your order.</p>
+        
+        <div class="status-step" id="orderStatus">
+            👨‍🍳 Kitchen is preparing your food...
+        </div>
+
+        <button class="add-btn" id="doneModalBtn" style="width: 100%; margin-top: 1rem;">Done</button>
+    </div>
+
+    <script src="javaBaker.js"></script>
+</body>
+</html>

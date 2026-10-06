@@ -1,0 +1,32 @@
+#game {
+    background-color: black;
+    width: 450px;
+    height: 450px;
+    position: relative;
+    overflow: hidden; /* Keeps sprites inside the game area */
+}
+
+#ghost, #player {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Floating effect using transform instead of top/font-size */
+#ghost {
+    animation: floatGhost 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes floatGhost {
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+    100% {
+        transform: translateY(-6px) scale(1.08);
+    }
+}
