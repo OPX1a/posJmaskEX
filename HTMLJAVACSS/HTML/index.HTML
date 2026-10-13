@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple To-Do App with Real-time BTC Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .completed { text-decoration: line-through; color: gray; }
+    li { margin-bottom: 8px; }
+    button { margin-left: 5px; }
+    #crypto-price { margin-bottom: 20px; padding: 15px; background: #f0f0f0; border-radius: 6px; }
+    .calculator-box { margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>To-Do List App</h1>
+
+  <div id="crypto-price">
+    <h3>Real-time Bitcoin Rate Calculator</h3>
+    <div class="calculator-box">
+      <label for="btc-amount"><strong>Amount (BTC):</strong> </label>
+      <input type="number" id="btc-amount" value="1" min="0" step="any" style="width: 100px; padding: 4px;">
+    </div>
+    <div id="price-result" style="margin-top: 12px; font-size: 1.1em;">Loading live prices...</div>
+  </div>
+
+  <div>
+    <input type="text" id="task-input" placeholder="Enter a task...">
+    <button id="add-btn">Add Task</button>
+  </div>
+
+  <ul id="task-list"></ul>
+
+  <script src="JAVA.js"></script>
+</body>
+</html>
